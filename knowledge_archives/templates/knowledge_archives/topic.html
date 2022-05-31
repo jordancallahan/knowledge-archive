@@ -1,0 +1,29 @@
+{% extends "knowledge_archives/base.html" %}
+
+{% block page_header %}
+    <h2>{{ topic }}</h2>
+{% endblock page_header %}
+
+
+
+{% block content %}
+    <p>
+        <h4><a href="{% url 'knowledge_archives:new_entry' topic.id %}">Add new entry</a></h4>
+    </p>
+
+    {% for entry in entries %}
+        <div class="card mb-3">
+            <h5 class="card-page_header">
+                {{ entry.date_added|date:'M d, Y H:i' }}
+                <small><a href="{% url 'knowledge_archives:edit_entry' entry.id %}">
+                    Edit entry</a></small>
+            </h5>
+            <div class="card-body">
+                {{ entry.text|linebreaks }}
+            </div>
+        </div>
+    {% empty %}
+        <p>There are no entries for this topic yet.</p>
+    {% endfor %}
+
+{% endblock content %}
