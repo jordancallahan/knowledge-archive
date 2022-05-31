@@ -9,8 +9,12 @@
             learning about. Whenever you learn something new about a topic, make an
             entry summarizing what you've learned.
         </p>
+        {% if user.is_authenticated %}
+            <h4>You're ready to get started!</h4>
+        {% else %}
+            <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}"
+                role="button">Register &raquo;</a>
+        {% endif %}
 
-        <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}"
-            role="button">Register &raquo;</a>
     </div>
 {% endblock page_header %}
