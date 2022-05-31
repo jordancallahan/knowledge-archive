@@ -7,4 +7,4 @@ Topics and entries are private.
 
 Have fun building your knowledge archive!
 
-Currently hosted at: [knowledge.jordancallahan.com](http://www.knowledge.jordancallahan.com)
+Currently hosted at: [knowledge.jordancallahan.com](http://knowledge.jordancallahan.com/)
